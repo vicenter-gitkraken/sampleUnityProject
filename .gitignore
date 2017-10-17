@@ -32,3 +32,15 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+
+### from https://www.gamasutra.com/blogs/TimPettersen/20161206/286981/The_complete_guide_to_Unity__Git.php ###
+## duplicates have been removed ##
+# Unity
+ 
+# VS/Rider/MD/Consulo
+ExportedObj/
+.idea/
+ 
+# Builds
+*.app
+*.exe
