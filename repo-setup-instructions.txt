@@ -1,0 +1,23 @@
+before working on the project, you have a little bit of setup you'll need to do:
+
+-- install git lfs (https://git-lfs.github.com/)
+
+-- add the following you your git config at ".git/config" so setup unity smartMerge tool for merg conflicts:
+
+[mergetool "unity_yaml"]
+cmd = 'C:\Program Files\Unity\Editor\Data\Tools\UnityYAMLMerge.exe' merge -p "$BASE" "$REMOTE" "$LOCAL" "$MERGED"
+trustExitCode = false
+keepTemporaries = true
+keepBackup = false
+ 
+[merge]
+tool = unity_yaml
+
+    - you can run this tool with the command "git mergetool", it will hopefully resolve conflicts.
+    
+-- verify the following settings are correct in your unity editor after opening the project:
+    - go to Edit > Project Settings > Editor
+    - in the inspector:
+        - set "Version Control" > "Mode" to "Visible Meta Files"
+        - set "Asset Serialization" > "Mode" to "Force Text"
+    
